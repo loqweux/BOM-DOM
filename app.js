@@ -80,3 +80,104 @@ clients.forEach((item) => {
   }
   clientList.append(li);
 });
+
+// DZ 8
+
+let linksArr = [
+  "https://www.amazon.com/",
+  "https://www.youtube.com/",
+  "https://devby.io/",
+  "https://www.google.com/",
+  "https://apple.com/",
+];
+
+const div = document.createElement("div");
+
+div.style.backgroundColor = "aqua";
+div.style.padding = "5px";
+div.style.textAlign = "center";
+
+linksArr.forEach((item) => {
+  let link = document.createElement("a");
+  link.href = item;
+  link.textContent = item;
+  link.target = "_blank";
+  div.appendChild(link);
+});
+document.body.append(div);
+
+// DZ 9
+
+const users = [
+  { name: "Mark", age: 12 },
+  { name: "Olga", age: 30 },
+  { name: "Tom", age: 25 },
+  { name: "Den", age: 43 },
+];
+// 1
+// const table = document.createElement("table");
+// table.setAttribute("border", "1");
+
+// users.forEach((item) => {
+//   const row = document.createElement("tr");
+//   const name = document.createElement("td");
+//   name.textContent = item.name;
+//   name.style.color = "red";
+//   row.append(name);
+//   const age = document.createElement("td");
+//   age.textContent = item.age;
+//   age.style.color = "blue";
+//   row.append(age);
+//   table.append(row);
+// });
+// document.body.append(table);
+
+// 2
+// let table = `<table border='1'>`;
+
+// users.forEach((item) => {
+//   table += `<tr>`;
+//   table += `<td style='color: red'> ${item.name} </td>`;
+//   table += `<td style='color: blue'> ${item.age} </td>`;
+//   table += `</tr>`;
+// });
+
+// document.body.innerHTML += table;
+
+// DZ 10
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8">
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//   <title>Document</title>
+// </head>
+// <body>
+//   <div>
+//     <article>
+//       <p>Lorem ipsum dolor sit amet, odio omnesque ius cu, quo ex atqui antiopam. At detracto menandri eos. Duo in causae viderer, graeci <a href="#">reprehendunt</a> has in. Decore <mark>nemore</mark> philosophia te pro, nobis legere causae ex mei, odio putant mentitum ea ius. Vix nostro deserunt explicari eu.</p>
+//     </article>
+//   </div>
+//   <ul>
+//     <li><a href="#">Link1</a></li>
+//     <li><a href="#">Link2</a></li>
+//     <li><a href="#">Link3</a></li>
+//     <li><a href="#">Link4</a></li>
+//   </ul><span></span>
+//   <a href="#">Some link</a>
+// </body>
+// </html>
+
+const ul = document.querySelector("ul");
+ul.classList.add("list");
+const li = document.querySelectorAll("ul li");
+li.forEach((item, index) => {
+  if (index % 2 === 0) {
+    item.classList.add("item");
+  }
+});
+const a = document.querySelectorAll("a");
+a.forEach((item) => {
+  item.classList.add("custom-link");
+});
